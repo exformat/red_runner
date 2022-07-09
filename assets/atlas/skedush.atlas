@@ -1,0 +1,156 @@
+skedush.png
+	size: 4096, 4096
+	repeat: none
+eagle
+	index: 2
+	bounds: 2792, 3250, 40, 41
+eagle
+	index: 4
+	bounds: 932, 865, 40, 41
+eagle
+	index: 1
+	bounds: 1862, 2412, 40, 41
+eagle
+	index: 3
+	bounds: 2834, 3250, 40, 41
+enemy_death
+	index: 1
+	bounds: 1862, 2455, 40, 41
+enemy_death
+	index: 6
+	bounds: 3722, 4045, 40, 41
+enemy_death
+	index: 3
+	bounds: 2, 70, 40, 41
+enemy_death
+	index: 5
+	bounds: 1904, 2455, 40, 41
+enemy_death
+	index: 2
+	bounds: 2792, 3207, 40, 41
+enemy_death
+	index: 4
+	bounds: 3722, 4002, 40, 41
+forest
+	index: 7
+	bounds: 2, 3293, 928, 793
+forest
+	index: 4
+	bounds: 2, 2498, 928, 793
+forest
+	index: 9
+	bounds: 932, 3293, 928, 793
+forest
+	index: 10
+	bounds: 2, 1703, 928, 793
+forest
+	index: 1
+	bounds: 932, 2498, 928, 793
+forest
+	index: 6
+	bounds: 1862, 3293, 928, 793
+forest
+	index: 3
+	bounds: 2, 908, 928, 793
+forest
+	index: 8
+	bounds: 932, 1703, 928, 793
+forest
+	index: 0
+	bounds: 1862, 2498, 928, 793
+forest
+	index: 5
+	bounds: 2792, 3293, 928, 793
+forest
+	index: 11
+	bounds: 2, 113, 928, 793
+forest
+	index: 2
+	bounds: 932, 908, 928, 793
+gem
+	index: 5
+	bounds: 3722, 3953, 15, 13
+gem
+	index: 2
+	bounds: 3764, 4005, 15, 13
+gem
+	index: 4
+	bounds: 3837, 4073, 15, 13
+gem
+	index: 1
+	bounds: 117, 98, 15, 13
+gem
+	index: 3
+	bounds: 932, 782, 15, 13
+item_pickup
+	index: 4
+	bounds: 2, 2, 32, 32
+item_pickup
+	index: 1
+	bounds: 932, 797, 32, 32
+item_pickup
+	index: 3
+	bounds: 1862, 2344, 32, 32
+item_pickup
+	index: 2
+	bounds: 2792, 3139, 32, 32
+opossum
+	index: 4
+	bounds: 3799, 4058, 36, 28
+opossum
+	index: 1
+	bounds: 79, 83, 36, 28
+opossum
+	index: 6
+	bounds: 1009, 878, 36, 28
+opossum
+	index: 3
+	bounds: 1981, 2468, 36, 28
+opossum
+	index: 5
+	bounds: 2911, 3263, 36, 28
+opossum
+	index: 2
+	bounds: 3799, 4028, 36, 28
+player_crouch
+	index: 1
+	bounds: 974, 874, 33, 32
+player_crouch
+	index: 2
+	bounds: 3722, 3968, 33, 32
+player_idle
+	index: 4
+	bounds: 3764, 4054, 33, 32
+player_idle
+	index: 2
+	bounds: 3764, 4054, 33, 32
+player_idle
+	index: 1
+	bounds: 44, 79, 33, 32
+player_idle
+	index: 3
+	bounds: 1904, 2421, 33, 32
+player_jump
+	index: 2
+	bounds: 2792, 3173, 33, 32
+player_jump
+	index: 1
+	bounds: 3764, 4020, 33, 32
+player_run
+	index: 4
+	bounds: 2, 36, 33, 32
+player_run
+	index: 1
+	bounds: 932, 831, 33, 32
+player_run
+	index: 6
+	bounds: 1862, 2378, 33, 32
+player_run
+	index: 3
+	bounds: 1946, 2464, 33, 32
+player_run
+	index: 5
+	bounds: 2834, 3216, 33, 32
+player_run
+	index: 2
+	bounds: 2876, 3259, 33, 32
