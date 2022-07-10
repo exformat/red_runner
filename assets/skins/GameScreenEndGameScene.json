@@ -186,8 +186,8 @@
 		"paddingEnabled": false,
 		"alignment": 1,
 		"fillParent": true,
-		"touchable": "childrenOnly",
-		"visible": true
+		"touchable": "disabled",
+		"visible": false
 	}
 ],
 "backgroundColor": null,
