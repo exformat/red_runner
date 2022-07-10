@@ -54,7 +54,7 @@ public class GameScreen implements Screen {
 		gameViewport = new ExtendViewport(7.2f, 12.8f, 10.8f, 23.2f, camera);
 		gameViewport.update(Gdx.graphics.getWidth(), Gdx.graphics.getHeight(), true);
 
-		stage = new Stage(new FitViewport(720, 1280));
+		stage = new Stage(new ExtendViewport(720, 1280, 1080, 2400));
 		skin = assetManager.get("skins/SkinData.json", Skin.class);
 		inputMultiplexer.addProcessor(stage);
 
