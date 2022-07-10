@@ -21,11 +21,9 @@ public class GameScreen implements Screen {
 	private final AssetManager assetManager;
 	private final TextureAtlas atlas;
 
-	private OrthographicCamera camera;
 	private Viewport gameViewport;
-	private SpriteBatch spriteBatch;
 
-	private InputMultiplexer inputMultiplexer = new InputMultiplexer();
+	private final InputMultiplexer inputMultiplexer = new InputMultiplexer();
 
 	private Stage stage;
 	private Skin skin;
@@ -50,7 +48,7 @@ public class GameScreen implements Screen {
 	}
 	@Override
 	public void show() {
-		camera = new OrthographicCamera();
+		OrthographicCamera camera = new OrthographicCamera();
 		gameViewport = new ExtendViewport(7.2f, 12.8f, 10.8f, 23.2f, camera);
 		gameViewport.update(Gdx.graphics.getWidth(), Gdx.graphics.getHeight(), true);
 
@@ -59,8 +57,7 @@ public class GameScreen implements Screen {
 		inputMultiplexer.addProcessor(stage);
 
 
-
-		spriteBatch = new SpriteBatch();
+		SpriteBatch spriteBatch = new SpriteBatch();
 
 		colorBkg = new Color(1f / 255 * 21, 1f / 255 * 24, 1f / 255 * 38, 1);
 
@@ -76,7 +73,7 @@ public class GameScreen implements Screen {
 	}
 
 
-	private FPSLogger fps = new FPSLogger();
+	private final FPSLogger fps = new FPSLogger();
 	@Override
 	public void render(float dt) {
 		ScreenUtils.clear(colorBkg);
