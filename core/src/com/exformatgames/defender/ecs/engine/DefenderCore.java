@@ -24,7 +24,7 @@ public abstract class DefenderCore {
 	protected InputMultiplexer inputMultiplexer;
 	protected TextureAtlas atlas;
 	protected AssetManager assetManager;
-	
+
 	protected PooledEngine engine;
 
 	public DefenderCore(OrthographicCamera camera, World box2DWorld, SpriteBatch spriteBatch, InputMultiplexer inputMultiplexer, TextureAtlas atlas, AssetManager assetManager) {
@@ -135,5 +135,9 @@ public abstract class DefenderCore {
 		}
 		engine.addSystem(new DebugSpriteSystem(camera, shapeRenderer)); //ok
 		engine.addSystem(new DebugShapesSystem(camera, shapeRenderer));
+	}
+
+	public PooledEngine getEngine() {
+		return engine;
 	}
 }
