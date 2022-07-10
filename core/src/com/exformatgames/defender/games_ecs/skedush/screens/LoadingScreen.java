@@ -6,9 +6,11 @@ import com.badlogic.gdx.audio.*;
 import com.badlogic.gdx.graphics.*;
 import com.badlogic.gdx.graphics.g2d.*;
 import com.badlogic.gdx.graphics.glutils.*;
+import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.utils.*;
 import com.badlogic.gdx.utils.viewport.*;
 import com.exformatgames.defender.games_ecs.skedush.audio.*;
+import com.exformatgames.defender.util.FreeTypeSkinLoader;
 
 public class LoadingScreen implements Screen {
 
@@ -34,7 +36,10 @@ public class LoadingScreen implements Screen {
 		batch = new SpriteBatch();
 		shapeRenderer = new ShapeRenderer();
 		assetManager = new AssetManager();
-		
+
+		assetManager.setLoader(Skin.class, new FreeTypeSkinLoader(assetManager.getFileHandleResolver()));
+
+
 		backgroundSprite = new Sprite(new Texture("loading_background.png"));
 		backgroundSprite.setSize(7.2f, 12.8f);
 
@@ -47,8 +52,7 @@ public class LoadingScreen implements Screen {
 		assetManager.load("sounds/jalastram/jump.wav", Sound.class);
 		assetManager.load("sounds/jalastram/end_jump.wav", Sound.class);
 
-		//assetManager.load("skins/StartScreenScene.json", Skin.class);
-		//assetManager.load("skins/game_screen/GameScreenSkin.json", Skin.class);
+		assetManager.load("skins/SkinData.json", Skin.class);
 
 		assetManager.load("music/Forest.mp3", Music.class);
 	}

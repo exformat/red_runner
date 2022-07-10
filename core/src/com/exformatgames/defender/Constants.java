@@ -6,7 +6,7 @@ public final class Constants
 	public static final float SCL = 0.03f;
 
 	public static final String prefsName = "skedush_prefs";
-	public static final String prefsMaxScoreKey = "skedush_prefs";
+	public static final String prefsMaxScoreKey = "maximum score";
 
 	public static final float WORLD_WIDTH = 10.8f;
 	public static final float WORLD_HEIGHT = 19.2f;
