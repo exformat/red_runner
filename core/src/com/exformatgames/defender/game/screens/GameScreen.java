@@ -100,17 +100,14 @@ public class GameScreen implements Screen {
 
 	@Override
 	public void pause() {
-		// TODO: Implement this method
 	}
 
 	@Override
 	public void resume() {
-		// TODO: Implement this method
 	}
 
 	@Override
 	public void hide() {
-		// TODO: Implement this method
 	}
 
 	@Override
