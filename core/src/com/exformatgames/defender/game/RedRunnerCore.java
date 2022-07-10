@@ -11,9 +11,9 @@ import com.badlogic.gdx.math.*;
 import com.exformatgames.defender.game.game_systems.*;
 import com.exformatgames.defender.game.game_systems.player_systems.*;
 
-public class Skedush extends DefenderCore {
+public class RedRunnerCore extends DefenderCore {
 
-	public Skedush(OrthographicCamera camera, World box2DWorld, SpriteBatch spriteBatch, InputMultiplexer inputMultiplexer, TextureAtlas atlas, AssetManager assetManager) {
+	public RedRunnerCore(OrthographicCamera camera, World box2DWorld, SpriteBatch spriteBatch, InputMultiplexer inputMultiplexer, TextureAtlas atlas, AssetManager assetManager) {
 		super(camera, box2DWorld, spriteBatch, inputMultiplexer, atlas, assetManager);
 	}
 	
