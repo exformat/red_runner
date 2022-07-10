@@ -8,9 +8,10 @@ import com.badlogic.gdx.scenes.scene2d.*;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
+import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.*;
 import com.badlogic.gdx.utils.viewport.*;
-import com.exformatgames.defender.game.Skedush;
+import com.exformatgames.defender.game.RedRunnerCore;
 import com.exformatgames.defender.game.audio.Musics;
 import com.exformatgames.defender.game.state.PlayerState;
 import com.ray3k.stripe.scenecomposer.SceneComposerStageBuilder;
@@ -30,15 +31,17 @@ public class GameScreen implements Screen {
 	
 	private Color colorBkg;
 
-	private Skedush skedushCore;
+	private RedRunnerCore skedushCore;
 	
-	private boolean debug = true;
+	private boolean debug = false;
 
 	public static int SCORE = 0;
 	public static int GEMS = 0;
 	public static PlayerState PLAYER_STATE;
 
 	private Label scoreLabel;
+	private Table endGameTable;
+	private Label endGameScoreLabel;
 	private Label gemsLabel;
 
 	public GameScreen(Game game, AssetManager assetManager, TextureAtlas atlas) {
@@ -61,7 +64,7 @@ public class GameScreen implements Screen {
 
 		colorBkg = new Color(1f / 255 * 21, 1f / 255 * 24, 1f / 255 * 38, 1);
 
-		skedushCore = new Skedush(camera, null, spriteBatch, inputMultiplexer, atlas, assetManager);
+		skedushCore = new RedRunnerCore(camera, null, spriteBatch, inputMultiplexer, atlas, assetManager);
 		skedushCore.create(debug);
 
 		initScene();
@@ -83,6 +86,12 @@ public class GameScreen implements Screen {
 
 		scoreLabel.setText("score: " + SCORE);
 		gemsLabel.setText("gems: " + GEMS);
+
+		if (PLAYER_STATE == PlayerState.DEATH){
+			endGameScoreLabel.setText("score: " + SCORE);
+			endGameTable.setTouchable(Touchable.childrenOnly);
+			endGameTable.setVisible(true);
+		}
 
 		stage.act(dt);
 		stage.getViewport().apply(true);
