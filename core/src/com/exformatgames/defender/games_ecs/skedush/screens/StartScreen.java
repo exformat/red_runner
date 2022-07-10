@@ -40,7 +40,7 @@ public class StartScreen implements Screen {
 		stage.addActor(imageBkg);
 
 		TypingLabel gameNameLabel = new TypingLabel("Red runner", skin, "MyLabelStyle");
-		gameNameLabel.setPosition(100, 800);
+		gameNameLabel.setPosition(stage.getWidth() / 100 * 10, stage.getHeight() / 2);
 		stage.addActor(gameNameLabel);
 
 
@@ -50,8 +50,8 @@ public class StartScreen implements Screen {
 		stage.addActor(recordLabel);
 
 		ImageTextButton startButton = new ImageTextButton("START", skin, "StartGameImageTextButtonStyle");
-		startButton.setPosition(360 - 128, 500);
-		startButton.addAction(Actions.fadeIn(0.5f));
+		startButton.setPosition(stage.getWidth() / 2 - startButton.getWidth() / 2, stage.getHeight() / 2 - (stage.getHeight() / 100 * 20));
+		startButton.addAction(Actions.fadeIn(1.5f));
 		startButton.addListener(new ClickListener(){
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
@@ -70,8 +70,6 @@ public class StartScreen implements Screen {
 			}
 		});
 		stage.addActor(exitButton);
-
-		stage.setDebugAll(true);
 	}
 
 	@Override
