@@ -6,7 +6,7 @@ import android.os.Bundle;
 import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
 import com.badlogic.gdx.backends.android.AndroidAudio;
-import com.exformatgames.defender.games_ecs.skedush.SkedushGame;
+import com.exformatgames.defender.game.SkedushGame;
 
 import barsoosayque.libgdxoboe.OboeAudio;
 
