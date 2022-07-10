@@ -33,9 +33,6 @@ public class PlayerDeathSystem extends IteratingSystem {
         Preferences preferences = Gdx.app.getPreferences(Constants.prefsName);
         int maxScore = preferences.getInteger(Constants.prefsMaxScoreKey);
 
-        System.out.println("this score: " + playerComponent.score);
-        System.out.println("max score: " + maxScore);
-
         if(maxScore < playerComponent.score){
             preferences.putInteger(Constants.prefsMaxScoreKey, playerComponent.score);
             preferences.flush();
