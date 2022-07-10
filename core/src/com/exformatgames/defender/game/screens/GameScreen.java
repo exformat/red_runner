@@ -116,8 +116,27 @@ public class GameScreen implements Screen {
 
 	private void initScene(){
 		stage.setDebugAll(debug);
+
 		Array<Table> tables = new SceneComposerStageBuilder().build(stage, skin, Gdx.files.internal("skins/GameScreenScene.json"));
-		scoreLabel = tables.get(0).findActor("ScoreLabel");
-		gemsLabel = tables.get(0).findActor("GemsLabel");
+		scoreLabel = tables.first().findActor("ScoreLabel");
+		gemsLabel = tables.first().findActor("GemsLabel");
+
+		tables = new SceneComposerStageBuilder().build(stage, skin, Gdx.files.internal("skins/GameScreenEndGameScene.json"));
+		tables.first().findActor("RestartButton").addListener(new ClickListener(){
+			@Override
+			public void clicked(InputEvent event, float x, float y) {
+				game.setScreen(new GameScreen(game, assetManager, atlas));
+			}
+		});
+
+		tables.first().findActor("ExitButton").addListener(new ClickListener(){
+			@Override
+			public void clicked(InputEvent event, float x, float y) {
+				Gdx.app.exit();
+			}
+		});
+
+		endGameScoreLabel = tables.first().findActor("ScoreLabel");
+		endGameTable = tables.first();
 	}
 }
