@@ -6,7 +6,7 @@ import android.os.Bundle;
 import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
 import com.badlogic.gdx.backends.android.AndroidAudio;
-import com.exformatgames.defender.game.SkedushGame;
+import com.exformatgames.defender.game.RedRunnerGame;
 
 import barsoosayque.libgdxoboe.OboeAudio;
 
@@ -27,6 +27,6 @@ public class AndroidLauncher extends AndroidApplication {
 		config.useImmersiveMode = true;
 		config.numSamples = 4;
 
-		initialize(new SkedushGame(), config);
+		initialize(new RedRunnerGame(), config);
 	}
 }
